@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Text</title>
+    <title>Simple Game</title>
     <style>
         body, html {
             height: 100%;
@@ -18,11 +18,26 @@
             font-size: 2rem;
             color: #333;
         }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Text in the Center</h1>
+    <div>
+        <h1 id="text">Press the button</h1>
+        <button onclick="changeText()">Click Me</button>
+    </div>
+
+    <script>
+        function changeText() {
+            document.getElementById('text').textContent = 'You pressed the button!';
+        }
+    </script>
 
 </body>
 </html>
